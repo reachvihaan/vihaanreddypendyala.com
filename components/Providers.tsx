@@ -7,7 +7,7 @@ export function Providers({ children }: { children: ReactNode }) {
   const reduce = useReducedMotion();
   return (
     <MotionConfig reducedMotion="user">
-      {reduce ? children : <ReactLenis root options={{ lerp: 0.1, smoothWheel: true }}>{children}</ReactLenis>}
+      {reduce ? children : <ReactLenis root options={{ lerp: 0.1, smoothWheel: true, anchors: true }}>{children}</ReactLenis>}
     </MotionConfig>
   );
 }

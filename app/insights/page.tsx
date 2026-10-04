@@ -1,5 +1,1 @@
-import {PageHero,CTA} from "@/components/UI";
-import {Gallery} from "@/components/Gallery";
-import {insights} from "@/lib/content";
-export const metadata={title:"Insights",description:"Practical articles and reflections on AI, growth, learning and Human-Augmented Intelligence.",alternates:{canonical:"/insights"}};
-export default function Insights(){return <><PageHero eyebrow="INSIGHTS / LEARN OUT LOUD" title="Thoughts on AI, growth & being human." text="Practical starting points, useful questions and room to reflect. Ideas for becoming more capable, one step at a time."/><section className="section"><div className="container"><Gallery items={insights} kind="insights"/></div></section><section className="section tint"><div className="container"><span className="eyebrow">KEEP THE CONVERSATION GOING</span><h2>A little curiosity in your feed.</h2><p>Follow @reachvihaan for more ideas and updates.</p><div className="actions"><a className="button" href="https://instagram.com/reachvihaan">Instagram ↗</a><a className="button secondary" href="https://youtube.com/@reachvihaan">YouTube ↗</a></div></div></section><CTA/></>}
+import {redirect} from "next/navigation";export default function Page(){redirect("/books-insights")}

@@ -1,18 +1,15 @@
 # Validation
 
-- PASS — `npm run build`: Next.js 16.3.8 compiles successfully; all six pages, 404, robots and sitemap are prerendered statically.
-- PASS — `npm run typecheck`: strict TypeScript, no errors.
-- PASS — Chromium layout checks on all six pages at 360, 390, 768, 1024, 1280 and 1536 pixels: no horizontal document overflow; one H1 per page.
-- PASS — Mobile menu opens and navigates to About.
-- PASS — Portfolio category filtering and reading dialog; Escape closes the dialog.
-- PASS — Contact required-field validation; generated WhatsApp URL includes the supplied test visitor name and message and the +91 destination. No message was sent during testing.
-- PASS — Insight content remains readable with JavaScript disabled.
-- PASS — All 16 generated image files supplied at the required paths, with WebP content images and 1200×630 PNG social preview. All image bytes decoded after one WebP repair.
-- PASS — Desktop and mobile screenshots visually reviewed; inline content never starts opacity-hidden.
-- PASS — Metadata, canonical links, sitemap, robots, service schema and FAQ schema implemented; no unconfirmed postal address or credentials in schema.
-- PASS — Brand palette and specified Google Fonts implemented. Full-name wordmark used instead of unconfirmed PVR initials.
-- PASS — Motion respects reduced-motion preference, hover effects gated to pointer devices, semantic focus and keyboard controls implemented.
-- REVIEW — Full WCAG audit and measured Lighthouse 95+ scores have not been performed; no score is claimed. Typography and main text/background combinations were reviewed for legibility.
-- REVIEW — Real project details, credentials and approved portrait remain explicitly bracketed placeholders. See README for full confirmation list.
+- PASS: `npm ci` with the specified dependency versions.
+- PASS: `npm run build`; all pages statically prerendered.
+- PASS: `npm run typecheck`.
+- PASS: 14 generated images bundled at the requested paths; 1200×630 PNG social image; SVG wordmark, stacked lockup and favicon.
+- PASS: source review for client/server boundaries, local imports, URL-encoded WhatsApp messages, required-field validation, honeypot, focus on validation errors, no invented business results.
+- PASS: responsive media queries, reduced-motion rules and readable server-rendered content implemented.
+- NOT VERIFIED IN BROWSER: responsive widths 360–1536, keyboard flows, interactive controls, visual contrast and no-JavaScript appearance. Playwright browser installation failed because its downloaded archive was invalid. A successful build is not a substitute for these checks.
+- NOT MEASURED: Lighthouse 95+, mobile frame rate, full WCAG AA audit.
+- NOT DEPLOYED: Vercel production. Import the repository to deploy.
 
-This is a built and tested repository, not a claim of deployment to a live Vercel domain.
+Unknown business facts are marked on pages and listed in README.md. Products/books are enquiry catalogues pending confirmed inventory and pricing. No fabricated testimonials or success metrics.
+
+- PASS: parsed generated HTML on all seven pages for one h1, canonical URL, image paths/alt attributes, and correct contact links. Verified all 14 image files and OG dimensions. Executed enquiry-helper test for real answers, URL encoding and omission of empty values.

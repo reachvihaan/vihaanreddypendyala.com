@@ -1,4 +1,1 @@
-import {PageHero,Art,CTA} from "@/components/UI";
-import {focus,slug} from "@/lib/content";
-export const metadata={title:"Focus",description:"Explore AI, technology, entrepreneurship, digital marketing, creativity and wellbeing with Vihaan Reddy.",alternates:{canonical:"/focus"}};
-export default function Focus(){return <><PageHero eyebrow="FOCUS / SIX CONNECTED WORLDS" title="Where my work lives." text="At the intersection of AI, business, creativity and wellbeing. Connected ideas, with people at the centre."/>{focus.map((f,i)=><section className={`section ${i%2?"tint":""}`} id={slug(f.title)} key={f.title}><div className={`container split ${i%2?"reverse":""}`}><div><span className="eyebrow">0{i+1} / EXPLORE</span><h2>{f.title}</h2><p className="large">{f.text}</p><ol className="process">{f.steps.map((s,n)=><li key={s}><span>0{n+1}</span>{s}</li>)}</ol></div><Art name={f.image} alt={`Visual concept for ${f.title}`}/></div></section>)}<CTA/></>}
+import {redirect} from "next/navigation";export default function Page(){redirect("/learn-ai")}
